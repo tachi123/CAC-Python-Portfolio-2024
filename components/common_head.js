@@ -27,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agrega etiquetas script
     // <script src="components/header.js" type="text/javascript" defer></script>
     var script1 = document.createElement('script');
-    script1.src = '/components/header.js';
+    script1.src = BASE_PATH + 'components/header.js';
     head.appendChild(script1);
 
     // <script src="components/footer.js" type="text/javascript" defer></script>
     var script2 = document.createElement('script');
-    script2.src = '/components/footer.js';
+    script2.src = BASE_PATH + 'components/footer.js';
     head.appendChild(script2);
 });
