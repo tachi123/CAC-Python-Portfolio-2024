@@ -1,0 +1,179 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: larger;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+header {
+  background-color: #AF8260; /* 4e342e */
+  color: #000;
+  grid-area: header;
+/*  display: grid; */
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "title"
+    "icon"
+    "nav";
+  justify-items: center;
+  align-items: center;
+}
+
+header h1 {
+  grid-area: title;
+  margin: 0;
+}
+
+header img {
+  grid-area: icon;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+.nav-link {
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item a {
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icono {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.nav-item a:hover {
+  color: #EAD8C0;
+}
+
+.container {
+  background-color: #EADBC8;
+  padding: 20px;
+  grid-area: main;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-principal {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #4e342e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.intro-texto p {
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form input[type="submit"] {
+  background-color: #4e342e;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form input[type="submit"]:hover {
+  background-color: #5d4037;
+}
+
+footer {
+  background-color: #AF8260;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  grid-area: footer;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.footer-icono {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

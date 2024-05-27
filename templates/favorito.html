@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Favorito - Elaborate Alfajores</title>
+  <link rel="stylesheet" href="../static/css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <script src="../components/common_head.js" defer></script>
+
+</head>
+<body>
+  <header-component></header-component>
+  <div class="container">
+    <h2>Tu Favorito</h2>
+    <form action="submit_favorite.html" method="post">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="telefono">Número de Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="favorite">Tu Alfajor Favorito:</label>
+      <textarea id="favorite" name="favorite" rows="4" required></textarea>
+      
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+  <footer-component></footer-component>
+
+  <script src="../components/common_scripts.js" defer></script>
+</body>
+</html>
