@@ -7,7 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
       <header>
         <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container-header">
             <!-- Sección Izquierda -->
             <span class="navbar-brand">Elaborate Alfajores</span>
             <!-- Botón para colapsar la barra en móviles -->
