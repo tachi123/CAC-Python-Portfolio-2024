@@ -29,7 +29,28 @@ class Header extends HTMLElement {
                     </li>
                 </ul>
             </div>
-            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Sección Centro <ul class="navbar-nav nav-center"> -->
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                    <span><i class="bi bi-house-door-fill"></i></span>
+                        <a class="nav-link" href="`+BASE_PATH+`"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="`+BASE_PATH+`templates/historia.html"><i class="fa fa-book" aria-hidden="true"></i>&nbsp; Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="`+BASE_PATH+`templates/premios.html"><i class="fa fa-trophy" aria-hidden="true"></i>&nbsp; Premios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="`+BASE_PATH+`templates/favorito.html"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; Tu Favorito</a>
+                    </li>
+                </ul>
+                <!-- Sección Derecha -->
+                <span class="navbar-text ml-auto">
+                    <img src="`+BASE_PATH+`static/img/icono-alfajor.png" alt="Icono de Alfajor" style="width: 40px; height: auto;">
+                </span>
+            </div>
         </div>
         </nav>
     </header>
