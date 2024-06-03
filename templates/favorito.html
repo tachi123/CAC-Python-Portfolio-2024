@@ -17,24 +17,82 @@
   <header-component></header-component>
   <div class="container">
     <h2>Tu Favorito</h2>
-    <form action="submit_favorite.html" method="post">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="telefono">Número de Teléfono:</label>
-      <input type="tel" id="telefono" name="telefono" required>
+    <form id="contactForm" action="https://formspree.io/f/xyyrqjly" method="POST">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="celular">Celular</label>
+        <input type="text" class="form-control" id="celular" name="celular" required>
+      </div>
+      <div class="form-group">
+        <label for="alfajor">Alfajor favorito</label>
+        <select class="form-control" id="alfajor" name="tipoalfajor" required>
+          <option value="">Selecciona un alfajor</option>
+          <option value="negro">Negro</option>
+          <option value="blanco">Blanco</option>
+          <option value="otros">Otros</option>
+        </select>
 
-      <label for="favorite">Tu Alfajor Favorito:</label>
-      <textarea id="favorite" name="favorite" rows="4" required></textarea>
-      
-      <input type="submit" value="Enviar">
+      </div>
+      <div class="form-group">
+        <label for="noticias">¿Quieres recibir noticias y promociones?</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="noticias" id="si" value="si">
+          <label class="form-check-label" for="si">Si</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="noticias" id="no" value="no" checked>
+          <label class="form-check-label" for="no">No</label>
+        </div>
+      </div>
+      <div class="form-group text-center">
+        <img src="../static/img/icono-alfajor.png" alt="Logo" id="logo">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Enviar</button>
     </form>
   </div>
   <footer-component></footer-component>
 
   <script src="../components/common_scripts.js" defer></script>
+
+  <script type="text/javascript">
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      // Previene el envío del formulario
+      event.preventDefault();
+
+      // Valida que todos los campos obligatorios estén completos
+      var formValid = true;
+      var formElements = event.target.elements;
+      for (var i = 0; i < formElements.length; i++) {
+        var element = formElements[i];
+        if (element.required && !element.value) {
+          formValid = false;
+          break;
+        }
+      }
+
+      // Si el formulario es válido, muestra un mensaje de éxito
+      if (formValid) {
+        alert('Formulario enviado correctamente');
+      } else {
+        // Si el formulario no es válido, muestra un mensaje de error y marca los campos faltantes
+        alert('Por favor completa todos los campos obligatorios');
+        for (var i = 0; i < formElements.length; i++) {
+          var element = formElements[i];
+          if (element.required && !element.value) {
+            element.classList.add('is-invalid');
+          }
+        }
+      }
+    });
+
+  </script>
 </body>
 </html>
