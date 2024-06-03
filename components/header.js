@@ -15,20 +15,6 @@ class Header extends HTMLElement {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Contenido del Navbar -->
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
-                </ul>
-            </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Sección Centro <ul class="navbar-nav nav-center"> -->
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
