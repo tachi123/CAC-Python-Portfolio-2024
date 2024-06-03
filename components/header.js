@@ -9,15 +9,18 @@ class Header extends HTMLElement {
         <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-header">
             <!-- Sección Izquierda -->
-            <span class="navbar-brand">Elaborate Alfajores</span>
+            <div class="w-100 order-0">
+              <span class="navbar-brand">Elaborate Alfajores <img src="`+BASE_PATH+`static/img/icono-alfajor.png" alt="Icono de Alfajor" style="width: 40px; height: auto;"></span>
+            </div>
             <!-- Botón para colapsar la barra en móviles -->
+            <div class="w-100 order-1">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Contenido del Navbar -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <!-- Sección Centro <ul class="navbar-nav nav-center"> -->
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <ul class="navbar-nav mr-auto ml-auto">
                     <li class="nav-item">
                     <span><i class="bi bi-house-door-fill"></i></span>
                         <a class="nav-link" href="`+BASE_PATH+`"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Inicio</a>
@@ -32,11 +35,8 @@ class Header extends HTMLElement {
                         <a class="nav-link" href="`+BASE_PATH+`templates/favorito.html"><i class="fa fa-heart" aria-hidden="true"></i>&nbsp; Tu Favorito</a>
                     </li>
                 </ul>
-                <!-- Sección Derecha -->
-                <span class="navbar-text ml-auto">
-                    <img src="`+BASE_PATH+`static/img/icono-alfajor.png" alt="Icono de Alfajor" style="width: 40px; height: auto;">
-                </span>
             </div>
+          </div>
         </div>
         </nav>
     </header>
