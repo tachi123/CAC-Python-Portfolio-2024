@@ -253,3 +253,62 @@ footer {
   height: 20px;
   margin-right: 5px;
 }
+
+.imagenes {
+  position: relative;
+  height: 400px; /* Altura deseada para las imágenes */
+}
+
+.imagenes img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Para que la imagen se ajuste al contenedor sin deformarse */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Efecto de transición suave */
+}
+
+.imagenes img:first-child {
+  opacity: 1; /* La primera imagen será visible al cargar la página */
+}
+
+/* Efecto de transición al pasar el mouse sobre las imágenes */
+.imagenes img:hover {
+  opacity: 0.5;
+}
+
+/* Efecto de transición automático cada 5 segundos */
+@keyframes cambio-imagen {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imagenes img:nth-child(1) {
+  animation: cambio-imagen 20s infinite 0s; /* La primera imagen cambiará cada 20 segundos */
+}
+
+.imagenes img:nth-child(2) {
+  animation: cambio-imagen 20s infinite 5s; /* La segunda imagen cambiará 5 segundos después de la primera */
+}
+
+.imagenes img:nth-child(3) {
+  animation: cambio-imagen 20s infinite 10s; /* La tercera imagen cambiará 10 segundos después de la primera */
+}
